@@ -1,0 +1,48 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// MEDIA QUERY MANGER 
+/* 
+    0 - 600PX : PHONE
+    600 - 900PX : TABLET PORTRAIT
+    [1080 X 1920] : DEFAULT STYLE
+    1800 : BIG DESKTOP
+*/ 
+
+@mixin respond-phone {
+    @media (max-width : 600px) {
+        @content
+    }
+}
+
+
+@mixin respond ($beakpoint) {
+    @if $beakpoint == phone {
+        @media (max-width : 37.5em) {@content}  
+    }
+    @if $beakpoint == tab-port {
+        @media (max-width : 56.25em) {@content}
+    }
+    @if $beakpoint == tab-land {
+        @media (max-width : 75em) {@content}
+    }
+    @if $beakpoint == small-desktop {
+        @media (max-width : 100em) {@content}
+    }
+    @if $beakpoint == big-desktop {
+        @media (min-width : 112.5em) {@content}
+    }
+}

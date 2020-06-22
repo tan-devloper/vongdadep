@@ -1,0 +1,157 @@
+.footer {
+  &__item-1 {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 4rem 4rem;
+    background-color: #d4d4d4;
+    object-fit: fill;
+  }
+
+  &__item-2 {
+    padding: 2rem 0;
+    background-color:$color-grey-dark-3 ;
+    display: flex;
+    flex-direction : column;
+    justify-content : center;
+    text-align : center;
+    &--logo_box {
+      height: 17rem;
+      width: 100%;
+
+      img {
+        width: 15rem !important;
+      }
+
+    }
+
+
+    &--content {
+      display: flex;
+      flex-direction: row;
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+      & > * {
+        flex: 1 1 50%;
+
+        @include respond(tab-port) {
+          &:not(:last-child) {
+            margin-bottom: 4rem
+          }
+        }
+
+      }
+    }
+
+
+  }
+
+
+  .footer__item-3 {
+    background-color:#222222;
+    color: white;
+    display: flex;
+    padding: 2rem 4rem;
+    font-size: 1.2rem;
+    justify-content:center;
+    text-align: center;
+
+
+    & > * {
+      flex: 1 1 50%;  
+    }
+
+    a {
+      color:#3378E3 ;
+      font-size:2.5rem
+    }
+  }
+}
+
+
+.address {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.decripsion {
+  flex: 1 1 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:not(:last-child) {
+    padding-right: 2rem;
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 2rem;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__text {
+    &--heading {
+      font-size: $default-font-size;
+      color: $color-grey-dark-3;
+    }
+    &--paragraph {
+      color: $color-grey-dark-3;
+    }
+  }
+
+  @include respond(tab-port) {
+    flex: 1 1 40%;
+    justify-content: flex-start;
+
+    &:nth-child(1) {
+      margin-bottom: 2rem;
+    }
+    &:nth-child(2) {
+      margin-bottom: 2rem;
+    }
+  }
+  @include respond(phone) {
+    flex: 1 1 60%;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+
+
+  
+
+}
+
+
+.hoverEffect {
+  font-size: 2rem;
+  display: inline-block;
+  transition : .3s ease;
+  color: $color-grey-light-1;
+  background-color: $color-grey-dark-3;
+  width: unset;
+  // color : rgb(206, 206, 206);
+  &:link,
+        &:visited {
+            color: $color-grey-light-1;
+            background-color: $color-grey-dark-3;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+}

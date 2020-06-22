@@ -1,0 +1,34 @@
+  
+.u-center-text { text-align: center !important; }
+
+.u-margin-bottom-medium {
+     margin-bottom: 4rem !important; 
+
+     @include respond (tab-port) {
+         margin-bottom:3rem !important ;
+     }
+}
+.u-margin-bottom-big {
+     margin-bottom: 8rem !important; 
+
+     @include respond (tab-port) {
+        margin-bottom:5rem !important ;
+    }
+}
+.u-margin-left-medium {
+    margin-left: 6rem;
+
+    @include respond (phone) {
+        margin-left: 3rem !important;
+    }
+}
+.u-padding-top-small {padding-top: 3rem !important;}
+.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
+.u-margin-top-big { margin-top: 8rem !important; }
+.u-margin-top-medium { margin-top: 6rem !important; }
+.u-margin-top-small { margin-top: 4rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+.u-to-uppercase {text-transform: uppercase !important}
+.bold {font-weight: bold;}
+.italy {font-style: italic;}
+.with-80 {width: 80% !important;}

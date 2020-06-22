@@ -1,0 +1,158 @@
+.header {
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: $color-white;
+  transition: 0.5s ease;
+  width: 100%;
+  height: $navbar-height;
+  border-bottom: 1px solid rgba($color-grey-dark, 0.2);
+  box-shadow: 0px 3px 6px 0px rgba(187, 187, 187, 0.75);
+  @include respond(phone) {
+    margin: 0;
+    display: block;
+  }
+  @include respond(tab-port) {
+    display: block;
+    position: absolute;
+  }
+  position: fixed;
+
+  &__hamburger {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 4rem;
+    font-size: 2rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid $color-black;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:active {
+      transform: translate(-50%, -45%);
+    }
+
+    @include respond(tab-port) {
+      display: block;
+    }
+
+    @include respond(phone) {
+      right: 2rem!important;
+    }
+
+  }
+
+  
+  &__logo {
+    display : flex;
+    width: $navbar-height + 20rem;
+    height: $navbar-height;
+    align-items: center;
+    color: $color-primary;
+    padding-left: 2rem;
+    margin-left: 10rem;
+
+    @include respond(tab-port) {
+      margin-left: 5rem !important;
+    }
+    @include respond(phone) {
+      margin-left: 0 !important;
+    }
+
+
+    a {
+      width: 6rem;
+    }
+    span {
+      width: auto;
+      font-size:2rem
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    padding-right: 10rem;
+    @include respond(phone) {
+      padding-right: 2.5rem;
+    }
+    @include respond(tab-land) {
+      padding-right: 4rem;
+    }
+    @include respond(tab-port) {
+    padding-top: 4rem;
+      border-top: 3px solid #2ea3f2;
+      background-color: rgb(236, 236, 236);
+      height: 40rem;
+      padding: 0;
+      display: none;
+      text-align: center;
+      letter-spacing: .1rem;
+
+      & > *:first-child {
+        margin-top: 2rem
+      }
+    }
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & input {
+      border: none;
+      outline: none;
+      color: inherit;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $color-primary;
+      font-size: inherit;
+      margin-right: 1rem;
+      background-color: transparent;
+
+      @include respond(tab-port) {
+        border-bottom: 1px solid  $color-grey-dark-3
+      }
+
+    }
+
+    ::placeholder {
+      color: inherit;
+    }
+
+    & > * {
+      @include respond(tab-port) {
+        height: 10%;
+        font-size: 3rem;
+        color: $color-grey-dark-3;
+        display: block;
+        text-align: center;
+        margin-bottom: 5rem;
+
+        i {
+          color: $color-grey-dark-3 !important;
+        }
+
+      }
+      font-size: 1.6rem;
+      color: $color-primary;
+      cursor: pointer;
+
+      &:not(:first-child) {
+        padding-left: 3rem;
+      }
+
+      &:nth-child(2) {
+        span {
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.opened {
+  @include respond(tab-port) {
+    display: block;
+  }
+}

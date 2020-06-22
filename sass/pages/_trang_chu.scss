@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Sacramento&display=swap");
+.glide-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 60rem;
+}
+
+.glide__track {
+  width: 100%;
+  height: 100%;
+
+  & ul.glide__sliders {
+    width: 100%;
+    height: 100%;
+
+    & > li {
+      width: 100%;
+      height: 100%;
+
+      & img {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.glide__arrows {
+  position: relative;
+  top: -50%;
+  left: 0;
+
+  & > * {
+    border: none;
+    background-color: transparent;
+    transition: all 0.4s esae;
+    font-size: 2rem;
+    font-weight: bold;
+    outline: none;
+  }
+}
+
+.glide__arrow {
+  border: none !important;
+
+  &--left {
+    position: absolute;
+    top: 50%;
+    &:active {
+      transform: translate(-0.2rem, -50%);
+    }
+  }
+
+  &--right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    &:active {
+      transform: translate(0.2rem, -50%);
+    }
+  }
+
+  & > * {
+    border: none;
+    border-color: white;
+  }
+}
+
+.aboutUs {
+  display: flex;
+
+  font-size: $default-font-size;
+  @include respond(tab-land) {
+    display: block;
+  }
+
+  &__img {
+    flex: 1.5;
+
+    img {
+    }
+  }
+  &__text {
+    flex: 2;
+    @include respond(tab-land) {
+      margin-top: 4rem;
+    }
+  }
+
+  .signature {
+    font-family: "Parisienne", cursive;
+    font-size: 4rem;
+  }
+}
+
+.special-font {
+  font-family: specialFont, Helvetica, Arial, Lucida, sans-serif;
+}
+
+.newProducts {
+  .heading-secondary {
+    width: 50%;
+    padding-bottom: 4rem;
+  }
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  padding-left: 4rem;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+.product {
+  max-width: 25rem;
+  flex: 1 1 15%;
+  margin: 0 4rem 6rem 0;
+  flex-wrap: nowrap;
+  border: 1px solid $color-primary;
+  border-radius: 3px;
+  padding: 1rem 0.5rem;
+  transition: 0.2s ease;
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
+
+  @include respond(phone) {
+    margin: 6rem 6rem 6rem 6rem;
+  }
+
+  img {
+    height: 18rem;
+    width: 15rem;
+  }
+
+  &__price {
+    color: rgb(255, 113, 113) !important;
+  }
+}
+
+.frag {
+  border-bottom: 1px solid $color-grey-dark-2;
+  position: relative;
+  &__bookmark {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    color: #353535;
+    background-color: $color-primary;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: unset;
+
+    &:hover {
+      padding-left: 4rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.reviewProduct {
+  width: 100%;
+  display: flex;
+  padding: 5rem 8rem 2rem 2rem;
+
+  &__left {
+    flex: 1;
+    width: 100%;
+
+    & > * {
+      margin-left: 3rem;
+      width: 80%;
+      height: 44rem;
+    }
+  }
+  &__right {
+    flex: 1;
+
+    &--name {
+      font-size: 2rem !important;
+      letter-spacing: 0;
+    }
+
+    &--price {
+      font-size: 2.3rem;
+      color: #088de6;
+    }
+
+    &--review {
+      ul.list {
+        font-size: 1.2rem;
+      }
+    }
+
+    &--alert {
+      margin: 1rem 0;
+      color: #ff0000;
+      font-size: 1.2rem;
+    }
+
+    &--info {
+      list-style-type: circle;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    &--hotline {
+      display: flex;
+      flex-direction: row;
+      font-size: $default-font-size;
+
+      & span {
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 1.8rem;
+          color: #ff0000;
+        }
+      }
+    }
+
+    &--purchase {
+      margin-top: 2rem;
+      input {
+        width: 6rem;
+        padding: 0.5rem 1rem;
+        height: 3rem;
+        background-color: $color-grey-dark;
+        outline: none;
+        border: none;
+        border-radius: 2.5px;
+        color: $color-grey-dark;
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        font-size: 1.2rem;
+      }
+
+      button {
+        border: none;
+        background-color: #ff0000;
+        color: white;
+        padding: 0.7rem 1rem 0.7rem 1rem;
+        margin-left: 1.5rem;
+        border-radius: 3px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        outline: none;
+        &:hover {
+          padding: 0.7rem 1rem 0.7rem 2rem;
+          letter-spacing: 0.1rem;
+          background-color: rgb(216, 211, 211);
+          color: #ff0000;
+        }
+        &:active {
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    img {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+}
+
+.value {
+  & > * {
+    height: 2rem;
+    display: inline-block;
+  }
+
+  &__empty {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.woocommerce-cart {
+  margin:  0 auto 2rem auto;
+  width: 60%;
+  font-size: 1.2rem;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
+  thead {
+    tr {
+      th {
+        text-align: start;
+        border-top: 1px solid  rgba(228, 228, 228, 0.719);
+        border-bottom: 1px solid  rgba(228, 228, 228, 0.719);
+        padding: 0.857em 0.587em;
+        max-width: 100%;
+        &:last-child {
+          border-right: 1px solid  rgba(228, 228, 228, 0.719);
+        }
+        &:first-child {
+          border-left: 1px solid  rgba(228, 228, 228, 0.719);
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-bottom: 1px solid rgba(228, 228, 228, 0.719);
+        padding: 0.857em 0.587em;
+        max-width: 100%;
+        &:last-child {
+          border-right: 1px solid  rgba(228, 228, 228, 0.719);
+        }
+        &:first-child {
+          border-left: 1px solid  rgba(228, 228, 228, 0.719);
+        }
+
+        input {
+          width: 6rem;
+          padding: 0.5rem 1rem;
+          height: 3rem;
+          background-color: rgba(228, 228, 228, 0.719);
+          outline: none;
+          border: none;
+          border-radius: 2.5px;
+          color: $color-grey-dark;
+          background-color: rgba(0, 0, 0, 0.2) !important;
+          font-size: 1.2rem;
+        }
+
+        button {
+          background-color: white;
+          outline: none;
+          border: none;
+          color: red;
+          font-weight: bold;
+          font-size: 1.8rem;
+          cursor: pointer;
+          padding-left: 2rem;
+          &:focus {
+            outline:none;
+          }
+          &:active {
+            transform : translateY(2px)
+          }
+          
+        }
+        
+      }
+    }
+  }
+}
+.cart__name {
+  a{
+  color: #2ea3f2;
+  }
+}
