@@ -13,23 +13,10 @@
   & ul.glide__sliders {
     width: 100%;
     height: 100%;
-
-    & > li {
-      width: 100%;
-      height: 100%;
-
-      & img {
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 }
 
 .glide__arrows {
-  position: relative;
   top: -50%;
   left: 0;
 
@@ -173,19 +160,35 @@
   display: flex;
   padding: 5rem 8rem 2rem 2rem;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
   &__left {
     flex: 1;
     width: 100%;
-
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: center;
+    }
     & > * {
       margin-left: 3rem;
       width: 80%;
       height: 44rem;
+
+      @include respond(tab-port) {
+        margin: 0;
+        width: 90%;
+      }
     }
   }
   &__right {
     flex: 1;
-
+    @include respond(tab-port) {
+      margin: 2rem auto;
+      width: 80%;
+    }
     &--name {
       font-size: 2rem !important;
       letter-spacing: 0;
@@ -289,10 +292,22 @@
   }
 }
 
+.cart {
+  h3 {
+    display: inline-block;
+    margin-left: 20%;
+    font-size: 1.8rem;
+  }
+}
+
 .woocommerce-cart {
-  margin:  0 auto 2rem auto;
+  margin: 0 auto 2rem auto;
   width: 60%;
   font-size: 1.2rem;
+
+  @include respond(phone) {
+    width: 100%;
+  }
 
   img {
     width: 32px;
@@ -303,15 +318,15 @@
     tr {
       th {
         text-align: start;
-        border-top: 1px solid  rgba(228, 228, 228, 0.719);
-        border-bottom: 1px solid  rgba(228, 228, 228, 0.719);
+        border-top: 1px solid rgba(228, 228, 228, 0.719);
+        border-bottom: 1px solid rgba(228, 228, 228, 0.719);
         padding: 0.857em 0.587em;
         max-width: 100%;
         &:last-child {
-          border-right: 1px solid  rgba(228, 228, 228, 0.719);
+          border-right: 1px solid rgba(228, 228, 228, 0.719);
         }
         &:first-child {
-          border-left: 1px solid  rgba(228, 228, 228, 0.719);
+          border-left: 1px solid rgba(228, 228, 228, 0.719);
         }
       }
     }
@@ -323,10 +338,10 @@
         padding: 0.857em 0.587em;
         max-width: 100%;
         &:last-child {
-          border-right: 1px solid  rgba(228, 228, 228, 0.719);
+          border-right: 1px solid rgba(228, 228, 228, 0.719);
         }
         &:first-child {
-          border-left: 1px solid  rgba(228, 228, 228, 0.719);
+          border-left: 1px solid rgba(228, 228, 228, 0.719);
         }
 
         input {
@@ -352,20 +367,227 @@
           cursor: pointer;
           padding-left: 2rem;
           &:focus {
-            outline:none;
+            outline: none;
           }
           &:active {
-            transform : translateY(2px)
+            transform: translateY(2px);
           }
-          
         }
-        
       }
     }
   }
 }
 .cart__name {
-  a{
-  color: #2ea3f2;
+  a {
+    color: #2ea3f2;
+  }
+}
+
+.cart_totals {
+  @include respond(phone) {
+    text-align: center;
+  }
+}
+
+.cart-collaterals {
+  width: 60%;
+  margin: 3rem auto;
+  position: relative;
+  text-align: end;
+  font-size: 1.3rem;
+
+  @include respond(phone) {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  table {
+    margin-left: auto;
+    margin-bottom: 3rem;
+    @include respond(phone) {
+      width: 100%;
+    }
+    tbody {
+      width: 100%;
+    }
+    tr {
+      th {
+        text-align: start;
+        border-left: 1px solid rgba(228, 228, 228, 0.719);
+        padding: 0.857em 0.587em;
+        max-width: 100%;
+        &:last-child {
+          border-bottom: 1px solid rgba(228, 228, 228, 0.719);
+        }
+        &:first-child {
+          border-top: 1px solid rgba(228, 228, 228, 0.719);
+          border-bottom: 1px solid rgba(228, 228, 228, 0.719);
+        }
+      }
+
+      td {
+        text-align: start;
+        border-right: 1px solid rgba(228, 228, 228, 0.719);
+        padding: 0.857em 0.587em;
+        max-width: 100%;
+        &:last-child {
+          border-top: 1px solid rgba(228, 228, 228, 0.719);
+          border-bottom: 1px solid rgba(228, 228, 228, 0.719);
+        }
+        &:first-child {
+          border-bottom: 1px solid rgba(228, 228, 228, 0.719);
+        }
+      }
+    }
+  }
+}
+
+.purchase {
+  padding: 1.5rem 3.3rem;
+  width: 6rem;
+  margin-bottom: 3rem;
+  background-color: red;
+  color: white;
+  transition: all 0.4s ease;
+  text-align: center;
+  border-radius: 3px;
+  &:hover {
+    color: red;
+    background-color: rgb(207, 206, 206);
+  }
+}
+
+.woocommerce {
+  display: flex;
+  flex-direction: row;
+
+  font-size: 1.6rem;
+  width: 90%;
+  margin: 0 auto 2rem auto;
+  label {
+    font-size: 1.3rem;
+  }
+
+  & input {
+    padding: 0.8rem 1rem;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.719);
+    border-radius: 3px;
+    color: $color-grey-dark;
+  }
+  & form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+  .left {
+    flex: 1;
+    & > span {
+      display: flex;
+      flex-direction: column;
+    }
+    .name {
+      display: flex;
+      flex-direction: row;
+      & > span {
+        display: flex;
+        flex-direction: column;
+        &:first-child {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+  }
+}
+button.purchase {
+  width: unset;
+  border: none;
+  cursor: pointer;
+}
+
+#purchasePage {
+  @include respond(tab-port) {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+.infomationCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 2rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/sets/img/lien-he.jpg");
+    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(70%) blur(1.5px);
+  }
+  & > * {
+    position: relative;
+  }
+  &--logo {
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    img {
+      width: 10rem;
+    }
+    span {
+      font-size: 4rem;
+      color : $color-primary;
+    }
+  }
+  &--context {
+    display : flex;
+
+    &__left {
+      flex: 1;
+      padding-left: 6rem;
+      p {
+        font-size: 1.6rem;
+        color: white;
+        margin-bottom: 2rem;
+      }
+
+      div {
+        font-size: 1.6rem;
+        color: white;
+      }
+
+      .red {
+        font-size: 2rem;
+        color: red;
+      }
+    }
+
+    &__right {
+      flex: 1;
+      text-align:center;
+    }
   }
 }

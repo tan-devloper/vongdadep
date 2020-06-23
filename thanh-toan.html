@@ -40,24 +40,91 @@
     </nav>
 
     <div class="container">
-      <div class="infomationCard">
-          <div class="infomationCard--logo u-center-text"><img src="./sets/img/logo.png" alt=""> <span class="special-font">Thach Anh Gems
-        </span></div>
-          <div class="infomationCard--context">
-            <div class="infomationCard--context__left">
-                <p>Các bạn muốn mua hàng xin hãy gọi cho shop Thạch Anh Gems theo số Hotline nhé! Shop ship hàng toàn quốc!</p>
-                <p>Địa Chỉ Liên Hệ : E2/46 QL50 , Xã Phong Phú , H. Bình Chánh , HCM</p>
-                <div class="u-center-text">HOTLINE: <span class="red bold">0905410055</span></div>
-            </div>
-            <div class="infomationCard--context__right"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FThachanhGems%2F&tabs=timeline&width=300px&height=300px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300px" height="300px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
+      <h1 class="u-center-text u-margin-top-small">Thanh toán</h1>
+
+      <div class="woocommerce">
+        <form action="#">
+          <div class="left">
+            <span class="name">
+              <span>
+                <label for="firstName">Tên *</label>
+                <input type="text" id="firstName" required />
+              </span>
+              <span>
+                <label for="lastName">Họ *</label>
+                <input type="text" id="lastName" required />
+              </span>
+              </span>
+  
+              <span>
+                <label for="companyName">Tên công ty (tuỳ chọn)</label>
+                <input type="text" required id="companyName">
+              </span>
+  
+  
+              <span>
+                <label for="adress">Địa chỉ *</label>
+                <input type="text" required id="adress">
+              </span>
+  
+              <span>
+                <label for="mailCode">Mã bưu điện (tuỳ chọn)</label>
+                <input type="text" required id="mailCode">
+              </span>
+  
+              <span>
+                <label for="city">Tỉnh / Thành phố *</label>
+                <input type="text" required id="city">
+              </span>
+  
+              <span>
+                <label for="phone">Số điện thoại *</label>
+                <input type="text" required id="phone" pattern="^[0-9]*$">
+              </span>
+              
+              <span>
+                <label for="email">Địa chỉ email *</label>
+                <input type="email" required id="email">
+              </span>
           </div>
+          <div class="right">
+            <div class="cart-collaterals" id="purchasePage">
+              <div class="cart_totals">
+                <h2>Cộng giỏ hàng</h2>
+                <table cellspacing="0" class="shop_table shop_table_responsive">
+                  <tbody>
+                     <tr class="cart-subtotal">
+                        <th>Tạm tính</th>
+                        <td data-title="Tạm tính"><span class="woocommerce-Price-amount amount bold"><span id=price>0</span>&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
+                     </tr>
+                     <tr class="woocommerce-shipping-totals shipping">
+                        <th>Giao hàng</th>
+                        <td data-title="Giao hàng">
+                                 <input type="hidden" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate1" value="flat_rate:1" class="  shipping_method"><label for="shipping_method_0_flat_rate1">Đồng giá: <span class="woocommerce-Price-amount amount bold">30.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></label>	
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="order-total">
+                        <th>Tổng</th>
+                        <td data-title="Tổng"><strong><span class="woocommerce-Price-amount amount"><span id="totalPrice">395.000</span>&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></strong> </td>
+                     </tr>
+                  </tbody>
+    
+               </table>
+               <button type="submit" href="#" class="purchase bold">Đặt hàng</button>
+               
+              </div>
+    
+            </div>
+          </div>
+        </form>
       </div>
 
       <footer class="footer">
         <div class="footer__item-1">
           <div class="decripsion">
             <div class="decripsion__icon">
-              <img src="sets/img/footer-icon/srv_1.png" alt="" />
+              <img src="../sets/img/footer-icon/srv_1.png" alt="" />
             </div>
             <div class="decripsion__text">
               <h4 class="decripsion__text--heading bold">
@@ -71,7 +138,7 @@
 
           <div class="decripsion">
             <div class="decripsion__icon">
-              <img src="sets/img/footer-icon/srv_2.png" alt="" />
+              <img src="../sets/img/footer-icon/srv_2.png" alt="" />
             </div>
             <div class="decripsion__text">
               <h4 class="decripsion__text--heading bold">
@@ -86,7 +153,7 @@
 
           <div class="decripsion">
             <div class="decripsion__icon">
-              <img src="sets/img/footer-icon/srv_3.png" alt="" />
+              <img src="../sets/img/footer-icon/srv_3.png" alt="" />
             </div>
             <div class="decripsion__text">
               <h4 class="decripsion__text--heading">
@@ -100,7 +167,7 @@
 
           <div class="decripsion">
             <div class="decripsion__icon">
-              <img src="sets/img/footer-icon/srv_4.png" alt="" />
+              <img src="../sets/img/footer-icon/srv_4.png" alt="" />
             </div>
             <div class="decripsion__text">
               <h4 class="decripsion__text--heading">
@@ -115,7 +182,7 @@
 
         <div class="footer__item-2">
           <div class="footer__item-2--logo_box">
-            <img src="sets/img/logo.png" alt="" />
+            <img src="../sets/img/logo.png" alt="" />
           </div>
           <div class="footer__item-2--content">
             <div class="social-links">
@@ -161,8 +228,9 @@
         </div>
       </footer>
     </div>
-    <script src="javascripts/scrollTop.js"></script>
-    <script defer src="./sets/fontawsome/js/all.min.js"></script>
-    <script src="javascripts/navbar.js"></script>
+    <script src="./sets/fontawsome/js/all.min.js"></script>
+    <script src="./javascripts/navbar.js"></script>
+    <script src="./javascripts/scrollTop.js"></script>
+    <script src="./javascripts/getItem.js"></script>
   </body>
 </html>

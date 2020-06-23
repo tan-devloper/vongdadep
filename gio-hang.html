@@ -6,7 +6,7 @@
     <title>Gio Hang</title>
     <link rel="shortcur icon" href="../sets/img/logo.jpg" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../sets/fontawsome/css/all.css" />
+    <link rel="stylesheet" href="../sets/fontawsome/css/all.css"/>
   </head>
   <body>
     <div class="scroller">
@@ -20,8 +20,8 @@
       <div class="header__menu" id="menu">
         <a href="../index.html" class="header__menu--item u-to-uppercase bold ">trang chủ</a>
         <a href="../san-pham.html" class="header__menu--item u-to-uppercase bold">sản phẩm</a>
-        <a href="" class="header__menu--item u-to-uppercase bold">liên hệ</a>
-        <a href="" class="header__menu--item u-to-uppercase bold"><i class="far fa-cart-arrow-down"></i></a>
+        <a href="./lien-he.html" class="header__menu--item u-to-uppercase bold">liên hệ</a>
+        <a href="./gio-hang.html" class="header__menu--item u-to-uppercase bold"><i class="far fa-cart-arrow-down"></i></a>
         <!-- <span class="header__menu--item u-to-uppercase bold"><input  placeholder="Tìm kiếm ..."type="text" class="header__menu--item-input" placeholder=""><a href="#"><i class="fal fa-search"></i></a></span> -->
       </div>
       <div class="header__hamburger" id="toggle"><i class="far fa-bars"></i></div>
@@ -43,20 +43,40 @@
           </thead>
 
           <tbody>
-            <tr class="woocommerce-cart--body">
-              <td class="cart__remove"><button id="remove_item">×</button></td>
-              <td class="cart__thumbnail">
-                <a href="./san-pham/ten-san-pham.html">
-                  <img src="sets/img/Icon-dien-thoai.jpg" alt="">
-                </a>
-            </td>
-              <td class="cart__name" data-title="Sản phẩm"><a href="./san-pham/ten-san-pham.html">Hồ ly đá thạch anh tóc vàng HL002</a></td>
-              <td class="cart__price"data-title="Giá">365.000 ₫</td>
-              <td class="cart__quantity" data-title="Số lượng"><input value="1" type="number" inputmode="number" step="1" min="1" max="99"></td>
-              <td class="cart__subtotal" data-title="Tạm tính">365.000 ₫</td>
-            </tr>
+            
           </tbody>
         </table>
+
+        <div class="cart-collaterals">
+          <div class="cart_totals">
+            <h2>Cộng giỏ hàng</h2>
+            <table cellspacing="0" class="shop_table shop_table_responsive">
+              <tbody>
+                 <tr class="cart-subtotal">
+                    <th>Tạm tính</th>
+                    <td data-title="Tạm tính"><span class="woocommerce-Price-amount amount bold" ><span id="price"  >0</span>&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></td>
+                 </tr>
+                 <tr class="woocommerce-shipping-totals shipping">
+                    <th>Giao hàng</th>
+                    <td data-title="Giao hàng">
+                             <input type="hidden" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate1" value="flat_rate:1" class="  shipping_method"><label for="shipping_method_0_flat_rate1">Đồng giá: <span class="woocommerce-Price-amount amount bold">30.000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></label>	
+                       </p>
+                    </td>
+                 </tr>
+                 <tr class="order-total">
+                    <th>Tổng</th>
+                    <td data-title="Tổng"><strong><span class="woocommerce-Price-amount amount" ><span id="totalPrice">395.000</span>&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></strong> </td>
+                 </tr>
+              </tbody>
+
+           </table>
+           <a href="./thanh-toan.html" class="purchase bold">Tiến Hành Thanh Toán</a>
+           
+          </div>
+
+        </div>
+        
+    </div>
         <!-- <div class="cartDisplay">
             <div class="cartDisplay__label label">
                 <span class="label__empty">&nbsp;</span>
@@ -188,7 +208,10 @@
         </div>
       </footer>
     </div>
-    <script src="javascripts/navbar.js></script>
-    <script src="./javascripts/gio-hang.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script async src="./javascripts/gio-hang.js"></script>
+
+    
+    <script src="./sets/fontawsome/js/all.min.js"></script>
   </body>
 </html>

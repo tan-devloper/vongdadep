@@ -74,7 +74,7 @@
 
   &__menu {
     width: 100%;
-    padding-right: 10rem;
+    padding-right: 12rem;
     @include respond(phone) {
       padding-right: 2.5rem;
     }
@@ -139,7 +139,7 @@
       cursor: pointer;
 
       &:not(:first-child) {
-        padding-left: 3rem;
+        padding-left: 6rem;
       }
 
       &:nth-child(2) {
