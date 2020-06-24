@@ -1,6 +1,5 @@
 //Get the button
 var mybutton = document.getElementsByClassName("scroller")[0];
-console.log(mybutton);
 document.addEventListener("scroll", () => {
   scrollFunction();
 });
@@ -10,7 +9,6 @@ document.addEventListener("scroll", () => {
 mybutton.addEventListener("click", () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  console.log("d");
 
 });
 // When the user scrolls down 20px from the top of the document, show the button

@@ -311,7 +311,9 @@ a {
   background: #777;
   border-radius: .5rem 0 0 .5rem;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.4s;
+  opacity: 0; }
 
 .u-center-text {
   text-align: center !important; }
@@ -840,8 +842,7 @@ button.purchase {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/sets/img/lien-he.jpg");
-    background-color: #fff;
+    background-image: url("../sets/img/lien-he.jpg");
     background-position: center;
     background-size: cover;
     filter: brightness(70%) blur(1.5px); }
@@ -876,3 +877,48 @@ button.purchase {
     .infomationCard--context__right {
       flex: 1;
       text-align: center; }
+
+.prevent {
+  cursor: not-allowed !important; }
+
+.apear {
+  opacity: 1; }
+
+.didPush {
+  width: 100%;
+  background-color: #55c57a;
+  padding: 1.5rem 5rem;
+  font-size: 1.6rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease; }
+  .didPush a {
+    color: white;
+    background-color: red;
+    padding: .5rem .8rem;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: auto; }
+  @media (max-width: 37.5em) {
+    .didPush {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .didPush a {
+        margin-top: 1rem;
+        text-align: center;
+        margin-left: 0; } }
+
+.pushed {
+  visibility: visible;
+  opacity: 1; }
+
+.w3-border {
+  width: 90% !important;
+  margin: 0 auto 2rem auto; }
+
+.w3-container > *:not(:last-child) {
+  margin-bottom: 1.5rem; }
